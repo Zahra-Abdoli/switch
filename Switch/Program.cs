@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Switch
 {
@@ -11,7 +12,7 @@ namespace Switch
             {
                 Console.WriteLine("please inter numerical mark:");
                 int mark = Convert.ToInt32(Console.ReadLine());
-                Print(mark);
+                PrintFor(mark);
             }
         }
         static void Print(int mark)
@@ -26,5 +27,33 @@ namespace Switch
 
 
         }
+        static void PrintFor (int mark)
+        {
+            switch (mark)
+            {
+                case 10:
+                    Console.WriteLine("Excellent");
+                    break;
+                case 9:
+                    Console.WriteLine("Excellent");
+                    break;
+                case 8:
+                    Console.WriteLine("Notable");
+                    break;
+                case 7:
+                    Console.WriteLine("Notable");
+                    break;
+                case 6:
+                    Console.WriteLine("Good");
+                    break;
+                case 5:
+                    Console.WriteLine("pass");
+                    break;
+                default:
+                    Console.WriteLine("Faild") ;
+                    break;
+            }
+
+        } 
     }
 }
