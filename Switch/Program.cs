@@ -10,10 +10,14 @@ namespace Switch
         {
             while (true)
             {
-                Console.WriteLine("please inter numerical mark:");
-                int mark = Convert.ToInt32(Console.ReadLine());
-                PrintFor(mark);
-            }
+                try {
+                    Console.WriteLine("please inter numerical mark:");
+                    int mark = Convert.ToInt32(Console.ReadLine());
+                    PrintFor(mark);
+                }
+                catch { Console.WriteLine("type should be number"); }
+                }
+            
         }
         static void Print(int mark)
         {
